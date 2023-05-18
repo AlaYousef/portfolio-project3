@@ -197,15 +197,20 @@ def input_value():
     user_input  = input("First, please enter your name:  ")
     return user_input
 
-def check_answer_input():
-    answer_input  = input("Enter answer number:  ")
-    while true:
+def check_answer_input(*answers_list):
+    print(answers_list)
+   
+    while True:
         try:
+            answer_input  = input("Enter answer number:  ")
             answer_number = int(answer_input)
             if answer_number < 1 or answer_number > 4:
                 raise ValueError(
                     f"answer option should be from 1 to 4"
                 )
+            else:
+                return str(answer_number)
+                break
         except ValueError as e:
             print(f"Invalid data: {e}, please try again.\n")
             
@@ -213,11 +218,24 @@ def check_answer_input():
 
 
 def run_quiz():
+    answer_list = []
     for index in (questions):
-        print(index['question \n'])
+        print(index['question'])
         for answers in index['answers']:
             print(answers)
-        check_answer_input()
+            
+        answer = check_answer_input()
+        print(answer)
+        print(index['correct_answer'])
+        
+        for value in index['answers']:
+            print(value.__contains__(index['correct_answer']))
+            if value.__contains__(index['correct_answer']):
+                print(f"Good! Your answer is correct...\n {index['details']}")
+            else:
+                print("faaiil")
+                
+            
         
             
        
