@@ -218,6 +218,7 @@ def check_answer_input(*answers_list):
 
 
 def run_quiz():
+    score = 0
     answer_list = []
     for index in (questions):
         print(index['question'])
@@ -225,15 +226,22 @@ def run_quiz():
             print(answers)
             
         answer = check_answer_input()
-        print(answer)
+        
         print(index['correct_answer'])
         
         for value in index['answers']:
+            print(index['correct_answer'])
             print(value.__contains__(index['correct_answer']))
-            if value.__contains__(index['correct_answer']):
-                print(f"Good! Your answer is correct...\n {index['details']}")
+            
+            if answer == index['correct_answer'][:1]:
+                print(f"Good! Your answer is correct :) ...\n {index['details']}")
+                score += 1
+                break
             else:
-                print("faaiil")
+                print("Your answer is incorrect :( ")
+                break
+
+        
                 
             
         
