@@ -202,11 +202,11 @@ def check_answer_input(*answers_list):
    
     while True:
         try:
-            answer_input  = input("Enter answer number:  ")
+            answer_input  = input("Enter answer number from (1-4):  ")
             answer_number = int(answer_input)
             if answer_number < 1 or answer_number > 4:
                 raise ValueError(
-                    f"answer option should be from 1 to 4"
+                    f"Answer option should be from 1 to 4"
                 )
             else:
                 return str(answer_number)
@@ -214,44 +214,55 @@ def check_answer_input(*answers_list):
         except ValueError as e:
             print(f"Invalid data: {e}, please try again.\n")
             
-        
-
 
 def run_quiz():
     score = 0
     answer_list = []
+
     for index in (questions):
+        print()
         print(index['question'])
+        
         for answers in index['answers']:
             print(answers)
             
         answer = check_answer_input()
         
-        print(index['correct_answer'])
-        
         for value in index['answers']:
-            print(index['correct_answer'])
-            print(value.__contains__(index['correct_answer']))
-            
+           
             if answer == index['correct_answer'][:1]:
                 print(f"Good! Your answer is correct :) ...\n {index['details']}")
+                print()
                 score += 1
                 break
             else:
                 print("Your answer is incorrect :( ")
                 break
+    get_result(score)
 
-        
+
+def get_result(result):
+    print()
+    print(f"Game Over.. Your score is {result} / {len(questions)} . \n" )
+
+    play_again_input = input("Play Again? (y/n): ")
+    while True:
+        try:
+            if play_again_input.lower() == "y":
+                clear_screen()
+                run_quiz()
+            elif play_again_input.lower() == "n":
+                print("Thanks for you time:) ")
                 
-            
-        
-            
-       
+                sys.exit()
+            else:
+                raise ValueError()
 
-
+        except ValueError as e:
+             print(f"Invalid input: please enter 'y' to continue or 'n' to exit.\n")
 
 def main():
-    #quiz_introduction()
+    quiz_introduction()
     run_quiz()
     
   
