@@ -163,9 +163,9 @@ def quiz_introduction():
     time.sleep(6)
     clear_screen()
 
-    name = input_value()
+    name = username_input()
     
-    print("\nHello, {name}! Welcome to Periodic Table Quiz")
+    print(f"\nHello, {name}! Welcome to Periodic Table Quiz")
     time.sleep(1)
     print("Press Enter if you are ready to start the quiz..\n")
     input()
@@ -190,14 +190,19 @@ def clear_screen():
     else:
         os.system('clear')
 
-def input_value():
+def username_input():
     """
     function that take name from user and return it
     """
     user_input  = input("First, please enter your name:  ")
     return user_input
 
+
 def check_answer_input(*answers_list):
+    """
+    function that answers_list as an argument and print it 
+    and check if user enter a valid answer option
+    """
     print(answers_list)
    
     while True:
@@ -216,6 +221,11 @@ def check_answer_input(*answers_list):
             
 
 def run_quiz():
+    """
+    function that run the game, 
+    fetch questions from questions list with answers option, 
+    then check if the user choose the correct answer or not and calculate the score (the total of correct answers)
+    """
     score = 0
     answer_list = []
 
@@ -224,6 +234,7 @@ def run_quiz():
         print(index['question'])
         
         for answers in index['answers']:
+            print()
             print(answers)
             
         answer = check_answer_input()
@@ -231,7 +242,7 @@ def run_quiz():
         for value in index['answers']:
            
             if answer == index['correct_answer'][:1]:
-                print(f"Good! Your answer is correct :) ...\n {index['details']}")
+                print(f"Good! Your answer is correct :) ...\n{index['details']}")
                 print()
                 score += 1
                 break
@@ -242,6 +253,10 @@ def run_quiz():
 
 
 def get_result(result):
+    """
+    function takes the score from run_quiz and display it to user,
+    ask the user to play again 
+    """
     print()
     print(f"Game Over.. Your score is {result} / {len(questions)} . \n" )
 
