@@ -1,238 +1,341 @@
-quiz questions
 https://www.britannica.com/quiz/facts-you-should-know-the-periodic-table-quiz
+https://www.flake8rules.com/
+# The Periodic Table Quiz
 
-# Plant Quiz
+# Introduction
 
-[_Click here to view live deployment_](https://plant-quiz.herokuapp.com/)
+The Periodic Table Quiz, is a quiz Periodic Table consists of 15 qustions. Each one with 4 answer options. The user choose one option of these answers and it will be displayed to user if the answer is correct or not with more details on correcr answer. At the end of the quiz, user will get the total score out of 15 and asked to coninue or exit. 
 
-This featured low level Python game deploys to a console.
+[Live Project Here](https://portfolio-project-3.herokuapp.com/)
 
-The quiz game consists of a short welcome message to get the player's desired username, and then 13 quextions which each have 4 answers to choose from. All data is in the run.py file, nothing is imported to an external file.
 
-The game code contains functions both to score the right and wrong answers at the end, as well as stop the player from entering anything other than answers as digits: 1, 2, 3, and 4.
+## README Table Content
 
-# _Content Menu_
+* [Introduction](#introduction)
+* [User Experience UX](#user-experience---UX)
+* [Design](#Design)
+    * [Colours](#Colours)
+* [Logic](#logic)
+     * [Flowcharts](#flowcharts)
 
-- [_Content Menu_](#content-menu)
-- [_Features_](#features)
-  - [_How To Play_](#how-to-play)
-  - [_Game Elements_](#game-elements)
-    - [_1 - Player_](#_1---player)
-    - [_2 - Welcome_](#2---welcome)
-    - [_3 - How To Play_](#3---how-to-play)
-    - [_4 - Quiz Questions_](#5---quiz-questions)
-    - [_5 - Correct Answer_](#6---correct-answer)
-    - [_6 - Incorrect Answer_](#7---incorrect-answer)
-    - [_7 - Invalid Entries_](#8---invalid-entries)
-    - [_8 - Final Score_](#9---final-score)
-    - [_9 - Play Again_](#11---play-again)
-  - [_Implemented Features_](#implemented-features)
-  - [_Features to be Implemented_](#features-to-be-implemented)
-- [_Bugs_](#bugs)
-- [_Testing_](#testing)
-- [_Validation_](#validation)
-- [_Technologies_](#technologies)
-- [_Deployment_](#deployment)
-  - [_1 - Version Control_](#1---version-control)
-  - [_2 - Page Deployment_](#2---page-deployment)
-- [_Credits_](#credits)
+* Game Features
+    * [Logo and Intro Message](#Logo-and-Intro-Message) 
+    * [Ask Player Name and City](#Ask-Player-Name-and-City)
+    * [Empty Input for Name and City](#Empty-Input-for-Name-and-City)
+    * [Hangman Stage 1](#Hangman-Stage-1)
+    * [Hangman Stage 2](#Hangman-Stage-2) 
+    * [Hangman Stage 3](#Hangman-Stage-3)
+    * [Hangman Stage 4](#Hangman-Stage-4)
+    * [Hangman Stage 5](#Hangman-Stage-5)
+    * [Hangman Stage 6](#Hangman-Stage-6)
+    * [Hangman Stage 7](#Hangman-Stage-7)
+    * [Hangman Stage 8 - Lose](#Hangman-Stage-8---Lose)
+    * [Hangman Stage 9 - Win](#Hangman-Stage-9---Win)
+    * [Hangman Stage 10 - Win Extra](#Hangman-Stage-10---Win-Extra)
+    * [Menu Options](#Menu-Options)
+    * [Leaderboard](#Leaderboard)
+    * [Exit Game](#Exit-Game)
+    * [How to Play](#how-to-play)
+* [Storage Data](#Storage-Data)
+* [Technologies Used](#technologies-used)
+    * [Languages Used](#languages-used)
+    * [Python Packages](#Python-Packages)
+    * [Frameworks - Libraries - Programs Used](#frameworks---libraries---programs-used)
+* [Testing](#testing)
+    * [PEP 8 Online](#PEP-8-Online)
+    * [Lighthouse](#Lighthouse)
+    * [Functionality](#Functionality)
+    * [Bugs](Bugs
+* [Deploying this Project](#deployment-this-project)
+    * [Forking this Project](#forking-this-project)
+    * [Cloning this Project](#cloning-this-project)
+* [Credits](#credits)
+* [Content](#content)
 
-# _Features_
+## User Experience - UX
 
-## _How To Play_
-    
- * The player will be prompted to enter their desired username.
- 
- * Skipping the name input is allowed. The line will simply be left blank.
- 
- * This is a multiple choice quiz game which presents a question with four possible answers. The user is then prompted to select the correct choice from the options presented.
- 
- * The goal is for the user to guess as many correct answers as possible.
- 
- * At the end of the 13 randomized questions, the player's score is presented in a ?/13 format. 
- 
- * Finally, there are instructions on how to play again.
+### User Stories
 
-## _Game Elements_
-
-### _1 - Player_
-
- * The player is prompted to enter their desired username.
-
-![Player](images/username-prompt.png)
-
- * If the User tries to press Enter without entering any content, they will receive an error message.
-
-![Incorrect Username](images/incorrect-username.png) 
-
-### _2 - Welcome_
-
- * After the player enters their prefered username, a short welcome message is displayed.
-
-![Welcome](images/welcome-message.png)
-
-### _3 - How To Play_
-
- * This prompts the player to press Enter in order to try the quiz.
-
-![How To Play](images/welcome-message.png)
-
-### _4 - Quiz Questions_
-
- * Then player is presented with the first randomized quiz question.
-
- * Immediately, along with the question, appear 4 possible answers. Only one is correct.
-
- * Instructions to enter a number between 1-4 appear beneath the quiz question and answers. This allows the user to answer the quiz question via one of these digits: '1', '2', '3', or '4'.
-
- * This loop is repeated until the 13th question is answered.
-
-![Quiz Questions](images/quiz-question.png)
-
-### _5 - Correct Answer_
-
- * If the player answers the quiz question correctly, they are presented simply with the message: "Correct!"
-
- * The players score will increase by one point each time a correct answer is guessed. The score will be displayed at the every end.
-
-![Correct Answer](images/correct-answer.png)
-
-### _6 - Incorrect Answer_
-
- * If the player answers the quiz question incorrectly, they are presented with the message: "Incorrect. The correct answer is {correct_answer}."
-
- * The players score will not increase, as only correct answers are incremented. Final score is displayed after the 13th question is answered.
-
-![Incorrect Answer](images/incorrect.png)
-
-### _7 - Invalid Entries_
-
- * If anything other than the digits 1-4 are entered as an answer, the player will receive this message: "Invalid input. Please enter a number between 1 and 4."
-
-![Invalid Entries](images/incorrect-answer.png)
-
-### _8 - Final Score_
-
- * After the play has answered all 13 quiz questions, their score is presented.
-
- * Only a total of correct answers are tallied and compared to the total number of questions.
-
- * If a player get all 13 answers correct they presented with a unique message: "Congratulations, {player_name}! You are a plant Master!"
-
-![Top Score](images/plant-master.png)
-
-### _9 - Play Again_
-
- * The player will be prompted with a message asking if they would like to play again.
-
-![Play Again](images/game-over-score.png)
-
- * If user presses Enter without any content, they will be prompted to try again.
-
-![Try Again](images/incorrect-try-again.png)
-
- * If the User presses 'Y', the game will be restarted.
- * If the User presses 'N', they will receive a closing message and the game ends.
-
-![Kill Screen](images/kill-screen.png)
-
-## _Implemented Features_
-
- * Organized code with quiz questions at the top, very easily altered or updated as needed.
+* As a website creator, I want to:
   
-## _Features to be Implemented_
+1. Build an easy app for the users to play the game.
+2. Build a game that is both enjoyable and challenging for the players.
+   
+* As a new visitor, I want to:
 
- * I would like to store the quiz questions on an external google sheet.
+1. Be able to understand the purpose of the App and start a new game.
+2. Be able to follow the score, see the wrong and right letters appear once I take a turn, and see how many tries remain before the game is over.
+3. Be able to watch my results and other players' results on the Leaderboard.
+   
+* As a returning visitor, I want to:
 
-# _Bugs_
+1. Be able to play the game again with a different word as chosen by the computer.
+2. Be challenged and try to improve on my previous scores. 
+3. Compare my scores with other users on the Leaderboard.
+   
+## Design
 
- * Through testing, I was made aware that the user was allowed to make an empty entry. I fixed this by running a while loop.
+#### Colours
+* The colours in the game are supplied by the Python Colorama Model
 
- * Instead of ending the quiz with instruction to the user on how to refresh the page, I inserted play_again and clear_screen functions to make a cleaner, easier, and more efficient user experience.
+### Flowcharts 
+![Flowcharts](./assets/images/readme/hangman-flowcharts.jpg)<br>
+I spent time planning and thinking about the logic and flow behind the game to ensure I had a general idea of how it could be built. I created flowcharts to assist me with the logical flow throughout the application. The charts were generated using [Lucidchart](https://lucid.app/) Integration and are shown below.<br>
 
-# _Testing_
+## Features
 
-| Test     | Expected      |   Outcome  | 
-| :----     |    :----   |  :---- | 
-| Run run.py | run.py loads, username prompt appears | As Expected |
-| Press Enter with no Input | Loads Incorrect Value Output, prompts user to try again | As Expected |
-| Insert desired username and press Enter | Welcome message and quiz-begin instructions appear | As Expected |
-| Press Enter to start the quiz | Page Clear function executes and first quiz question appears | As Expected |
-| Enter answer in digits 1-4 + Enter | Loads correct/incorrect Output and provides correct answer, loads next question | As Expected |
-| Press Enter With No Input | Loads Incorrect Value Output, prompts user to enter digits 1-4 | As Expected |
-|Random Selection of Quiz Questions until all 13 have been answered |Display Outputs Questions and correct answers | As Expected |
-| Press Enter on Final Quiz guess | Displays correct Output depending on user guess, Loads Game Over message, Loads Final Score Output, Loads Try Again option | As Expected |
-| User gets perfect score | A congratulations message appears along with the final 13/13 score | As Expected |
-| Press Enter with no input | Loads Invalid Input message, prompts the user to enter 'y' or 'n'. | As Expected |
-| Press Y on Try Again prompt |  Clears the page and runs quiz again, Starts the score back at 0, Runs through all 13 randomized questions again | As Expected |
-| Press N on Try Again Prompt | Loads final message to player, system exit command executed | As Expected |
+### Logo and Intro Message
 
-# _Validation_
+![Logo and Intro Message](./assets/images/readme/hangman-feature-1.jpg)
 
- * This game passes through the [Code Institute PEP8](https://pep8ci.herokuapp.com/) Validator with no errors.
+* When the users reach the website, they will see this feature. The game logo and the intro message are displayed here.<br>
 
-![Validation](images/validation.png)
+### Ask Player Name and City
 
-# _Technologies_
+![Ask Player Name and City](./assets/images/readme/hangman-feature-2.jpg)
+* After the player sees the intro feature, the computer will ask the user's to input their name and city.<br>
 
- * Python is the programming language used to produce the game.
+#### Empty Input for Name and City
+![Empty Input for Name and City](./assets/images/readme/hangman-feature-3.jpg)
+* If the player does not input their name and city, this alert will appear.<br>
+
+### Welcome Message and Game Rules
+![Welcome Message and Game Rules](./assets/images/readme/hangman-feature-4.jpg)
+* After the user inputs their name and city, the program will display the welcome message and the game rules. The player then presses any key to start the game.<br>
+
+## Game Features
+
+### Hangman Stage 1
+![Game Feature](./assets/images/readme/hangman-feature-5.jpg)<br><br>
+
+This feature displays where the main scene happens. Here the user can play and see the following information about the game:
+* Numbers of letters chosen by the computer 
+* Hangman stages
+* Letters guessed right
+* Letters guessed wrong
+* Current score
+* Current number of attempts
+* Input to guess a letter or a full word
+* Input letters to either guess a letter only or the full word
+
+### Hangman Stage 2 
+
+![Hangman Stage 2 ](./assets/images/readme/hangman-feature-6.jpg)<br><br>
+Any time the player guesses a wrong letter, a part of the hangman appears
+* 1 letter guessed wrong, the player will see the hangman and the first part of the hangman:  a rope, in green.
+
+### Hangman Stage 3
+
+![Hangman Stage 3](./assets/images/readme/hangman-feature-7.jpg)
+* 2 letters guessed wrong the player will see the hangman and 2 parts of the hangman a rope and head in green.
+
+### Hangman Stage 4
+
+![Hangman Stage 4](./assets/images/readme/hangman-feature-8.jpg)
+* 3 letters guessed wrong the player will see the hangman and 3 parts of the hangman rope, head and torso in yellow.
+
+### Hangman Stage 5
+
+![Hangman Stage 5](./assets/images/readme/hangman-feature-9.jpg)
+* 4 letters guessed wrong the player will see the hangman and 4 parts of the hangman rope, head, torso and the right arm in yellow.
+
+### Hangman Stage 6
+
+![Hangman Stage 6](./assets/images/readme/hangman-feature-10.jpg)
+* 5 letters guessed wrong the player will see the hangman and 5 parts of the hangman, rope, head, torso and both arms in red. Also the alert message "Danger Zone" will be displayed.
+
+### Hangman Stage 7
+
+![Hangman Stage 7](./assets/images/readme/hangman-feature-11.jpg)
+* 6 letters guessed wrong and the player will see the hangman and 6 parts of the hangman rope, head, torso, both arms and left leg in red. Also the alert message "Danger Zone" will be displayed.
+
+### Hangman Stage 8 - Lose
+
+![Hangman Stage 8 - Lose](./assets/images/readme/hangman-feature-12.jpg)
+* 7 letters guessed wrong the player will see the full hangman and the game is over.
+
+### Hangman Stage 9 - Win
+
+![Hangman Stage 9 - Win](./assets/images/readme/hangman-feature-13.jpg)
+* If the player guessed the full word letter by letter, they will see this feature and will win the game and get 200 points.
+
+### Hangman Stage 10 - Win Extra
+
+![Hangman Stage 10 - Win Extra](./assets/images/readme/hangman-feature-14.jpg)
+* If the player guessed all the letters that appear in the word thereby completing the word or at least guessing no more than 3 correct letters before completing the full word, this feature will appear.
+
+### Menu Options
+
+![Menu Options](./assets/images/readme/hangman-menu.jpg)
+* In the end of the game users will have access to the menu where they can choose from these options: <br>
+[A] - Play Again <br>
+[B] - Leaderboard <br>
+[C] - Exit Game
+
+### Leaderboard
+![Leaderboard](./assets/images/readme/hangman-leaderboard.jpg)
+* The Leaderboard shows the 15 players with the best scores.
+
+### Exit Game
+![Exit Game](./assets/images/readme/hangman-exit-game.jpg)
+* The players will see this message if they will chose to exit the game by typing [C].
+
+### How to Play
+![How to Play](./assets/images/readme/hangman-explanation-1.jpg)<br>
+![How to Play](./assets/images/readme/hangman-message-back.jpg)<br>
+The player has 7 attempts to try to guess the right word by inputting letters or can try to input all the letters to correctly complete the full . The word is randomly chosen by the computer from a list.
+* When the game starts the player can see how many letters are in the word [1] and the computer will ask the player to input a letter or a word [7].
+* If the player guesses the right letter, they will see a message from the computer [8] the letter guessed displayed in the word length [3], the hangman stage will remain the same [2] and the score will increase by 25 points [5]
+* If the player guesses a wrong letter, they will see a message from the computer [9] the letter guessed displayed in the wrong letters guesses [4], the hangman stage will turn to the next stage [2] and the number of attempts will decrease by 1 [6]
+* When the player types an invalid input, they will see a message from the computer [10].
+* If the user guesses the right word they will see the [Winner Feature](#Hangman-Stage-9---Win)
+* If the player guessed the full word at once or at least no more than 3 letters guessed right before trying to guess the full word, they will win the game-winning 500 extra points and see this feature [Winner Feature / Extra Points](#Hangman-Stage-10---Win)
+* 7 letters guessed wrong and the player will see the [Loser Feature](#Hangman-Stage-8---lose)
+
+## Storage Data
+
+I have used a Google sheet to save the player name, city, score and date.  This sheet is connected to the code through the Google Drive and Google Sheet API by the Google Cloud Platform. This method allows me to send and receive data as I had access to the Google Sheet API credentials. I also added in the Config Vars to these credentials when I was deploying the project in Heroku. As this is sensitive data, I had to add the creds.json in the Git ignore file. This would ensure that these credentials are not pushed to the repository.
+
+### Code to Connect to Google Sheet
+
+![Code to Connect to Google Sheet](./assets/images/readme/hangman-creds.jpg)
+
+### Google Sheet Hangman Leaderboard
+
+![Google Sheet Hangman Leaderboard](./assets/images/readme/hangman-google-sheet.jpg)
+
+## Technologies Used
+### Languages Used 
+
+* [Python](https://www.python.org/)
+
+#### Python Packages
+
+* [Random](https://docs.python.org/3/library/random.html?highlight=random#module-random): returns a random integer to get a random word
+* [Datetime](https://pypi.org/project/DateTime/): returns the full date
+* [Gspread](https://pypi.org/project/gspread/): allows communication with Google Sheets
+* [Colorama](https://pypi.org/project/colorama/): allows terminal text to be printed in different colours / styles
+* [Time](https://pypi.org/project/time/): defined time sleep
+* [google.oauth2.service_accoun](https://google-auth.readthedocs.io/en/stable/index.html): credentials used to validate credentials and grant access to Google service accounts
   
- * 'random' was imported to handle the mixing up of the quiz question order.
+### Frameworks - Libraries - Programs Used
+
+* [Git](https://git-scm.com/)
+    * Git was used for version control by utilizing the Gitpod terminal to commit to Git and push to GitHub
+* [GitHub](https://github.com/)
+    * GitHub is used to store the project's code after being pushed from Git
+* [Heroku](https://id.heroku.com)
+    * Heroku was used to deploy the live project
+* [VSCode](https://code.visualstudio.com/)
+    * VSCode was used to create and edit the website
+* [Lucidchart](https://lucid.app/)
+    * Lucidchart was used to create the flowchart
+* [PEP8](http://pep8online.com/)
+    * The PEP8 was used to validate all the Python code
+* [Patorjk](https://patorjk.com)
+    * Patorjk (ASCII Art Generator) was used to draw the game logos
+
+## Testing
+
+### PEP 8 Online
+
+The [PEP8](http://pep8online.com/) Validator Service was used to validate every Python file in the project to ensure there were no syntax errors in the project.
+
+![PEP8](./assets/images/readme/hangman-pep8-results.jpg).
+* No errors or warnings were found during the testing of the code in PEP8
   
- * 'textwrap' was imported to handle breaking up of any lines longer than the CLI.
+### Lighthouse 
+
+ Lighthouse was used to test Performance, Best Practices, Accessibility and SEO on the Desktop.
+
+* Desktop Results:
+
+  ![Lighthouse Result](./assets/images/readme/hangman-lighthouse.jpg).
+
+  ## Functionality 
+* The terminal has no issues and is working properly 
+* The typewriter starts typing at the right time and is working correctly 
+* The input for name and city have the right behaviour and shows the user an alert if the input is empty
+* The game rules appear without any issues after the player submits their name and city
+* The option to press any key to start a game is running well
+* The game runs without any issues and as expected 
+* At the end of the game, the Leaderboard is updating correctly
+* All the menu options are working without any fails
+
+## Bugs 
+### Python Lines too Long
+![Lines to long](./assets/images/readme/hangman-issue.jpg)
+![Lines to long](./assets/images/readme/hangman-issue-result.jpg)
+
+* When I first built the ASCII art for the logo I got the warning "line too long (126 > 79 characters)" from PEP8.<br>
+
+### Fixed Bug
+![Fix Bug](./assets/images/readme/hangman-issue-fixed.jpg)
+* I had to rebuild the logo using the program Patorjk (ASCII Art Generator) to avoid these issues.
+* 
+## Deploying this Project
+
+* This site was deployed by completing the following steps:
+
+1. Log in to [Heroku](https://id.heroku.com) or create an account
+2. On the main page click the button labelled New in the top right corner and from the drop-down menu select Create New App
+3. You must enter a unique app name
+4. Next select your region
+5. Click on the Create App button
+6. The next page is the project’s Deploy Tab. Click on the Settings Tab and scroll down to Config Vars
+7. Click Reveal Config Vars and enter port into the Key box and 8000 into the Value box and click the Add button
+8. Click Reveal Config Vars again and enter CREDS into the Key box and the Google credentials into the Value box
+9. Next, scroll down to the Buildpack section click Add Buildpack select python and click Save Changes
+10. Repeat step 8 to add node.js. o Note: The Buildpacks must be in the correct order. If not click and drag them to move into the correct order
+11. Scroll to the top of the page and choose the Deploy tab
+12. Select Github as the deployment method
+13. Confirm you want to connect to GitHub
+14. Search for the repository name and click the connect button
+15. Scroll to the bottom of the deploy page and select the preferred deployment type
+16. Click either Enable Automatic Deploys for automatic deployment when you push updates to Github
+
+## Forking This Project
+
+* Fork this project by following the steps:
+
+1. Open [GitHub](https://github.com/)
+2. Click on the project to be forked
+3. Find the Fork button at the top right of the page
+4. Once you click the button the fork will be in your repository
+
+## Cloning This Project
+
+* Clone this project by following the steps:
   
- * [GitHub](https://www.github.com) was used to hold the game repository files.
+1. Open [GitHub](https://github.com/)
+2. Click on the project to be cloned
+3. You will be provided with three options to choose from, HTTPS, SSH, or GitHub CLI, click the clipboard icon in order to copy the URL
+4. Once you click the button the fork will be in your repository
+5. Open a new terminal
+6. Change the current working directory to the location that you want the cloned directory
+7. Type git clone and paste the URL copied in step 3
+8. Press Enter and the project is cloned
 
- * [Gitpod](https://www.gitpod.io) and [CodeAnywere](https://app.codeanywhere.com/) were used for the coding environment.
+## Credits
 
- * [Heroku](https://www.heroku.com) was used to deploy the game to the web.
+### Content
 
-# _Deployment_
+* All the content in the game is original 
+* The terminal function and template for the deployable application was provided by [Code Institute - Template](https://github.com/Code-Institute-Org/python-essentials-template)
+* The Python code for the typewriter was taken from the following tutorial: [Kwasii](outube.com/watch?v=A_1THfBpCH8)
+  
+### Information Sources / Resources
 
-## _1 - Version Control_
+* [W3Schools - Python](https://www.w3schools.com/python/)
+* [Stack Overflow](https://stackoverflow.com/)
+* [Scrimba - Pyhton](https://scrimba.com/learn/python)
+* [Gambiter](http://gambiter.com/paper-pencil/Hangman_game.html)
 
- Version control was maintained using git within GitPod and CodeAnywhere to push code to the main repository.
 
- * From the Gitpod terminal use "git add .", which tells git you would like to make changes/updates to the files.
+## Special Thanks
 
- * Then use "git commit -m (plus a comment)", which commits the changes and updates the files.
+  * Special thanks to my mentor Sandeep Aggarwal, my colleagues at Code Institute, Kasia Bogucka, Shellie Downie and Mairéad Gillic for their assistance throughout this project.
 
- * Then use the "git push" command, which pushes the committed changes to the main repository. To go back and forth between Gitpod and CodeAnywhere workspaces, use the command "git pull" to make sure all data has been brought over before working from the new space.
 
-## _2 - Page Deployment_
 
- Heroku CLI was used for this game's deployment. Directions on how to do that are as follows:
 
- * After creating an account and logging in, click "New" to create a new app from the dashboard.
-
- * Choose app's unique name and select your region; press "Create app".
-
- * Go to "Settings" and navigate to Config Vars.
-
- * Add Config Vars. 
-    * This app used only one:
-        * KEY = PORT : VALUE = 8000.
- 
- * Add buildpacks Python and NodeJS - in this order.
- 
- * Now you may click the Deploy tab.
- 
- * Scroll Down to Deployment Method and select GitHub.
- 
- * Select repository to be deployed and connect to Heroku.
- 
- * Scroll down to deploy: 
-    * Option 1 is selecting Automatic deploys (Will Update Automatically with every "git push"). This is what I chose for this project.
-    * Option 2 is selecting Manual deploy (Needs to be manually redeployed after every change, via Heroku deploy tab).
-
- Visit the live deployment [HERE](https://plant-quiz.herokuapp.com/).
-
-# _Credits_
-
- * I used a fellow student's "Riddles" code for this README.md format inspiration: [A. Croshaw](https://github.com/A-Croshaw/Riddles/blob/main/README.md)
-
- * Code for exiting the game or restarting was inspired by fellow student's portfolio project: [Haniibani](https://github.com/Haniibani/Project-portfolio-3/blob/main/run.py#L56)
-
- * Much of the run_game function was inspired by (and learned from) Code Institute's walkthrough project: [love_sandwiches](https://github.com/KrystalCoding/Love-Sandwiches)
-
- * For Python code functionality, I borrowed advice and bits of code from: [python.org](https://www.python.org/), [w3schools](https://www.w3schools.com/python/default.asp), and [stackoverflow](https://stackoverflow.com/)
