@@ -202,7 +202,12 @@ def username_input():
     """
     function that take name from user and return it
     """
-    user_input = input("First, please enter your name:  ")
+    while True:
+        user_input = input("First, please enter your name:  ")
+        if user_input:
+            break
+        print("Username can not be' ', please try again.")
+    
     return user_input
 
 
@@ -280,8 +285,7 @@ def get_result(result):
                 print("Thanks for you time:)")
                 sys.exit()
             else:
-                raise ValueError()
-
+                raise ValueError("n or y are only expected")
         except ValueError as e:
             print(f"Invalid input: please enter 'y' or 'n' to  exit.\n")
 
