@@ -74,14 +74,15 @@ The Periodic Table Quiz, is a quiz Periodic Table consists of 15 qustions. Each 
 * The colours in the game are supplied by the Python Colorama Model
 
 ### Flowcharts 
-![Flowcharts](./assets/images/readme/hangman-flowcharts.jpg)<br>
-I spent time planning and thinking about the logic and flow behind the game to ensure I had a general idea of how it could be built. I created flowcharts to assist me with the logical flow throughout the application. The charts were generated using [Lucidchart](https://lucid.app/) Integration and are shown below.<br>
+This is the flowchart diagram for the quiz that represent the game process step by step. The charts were generated using [Lucidchart](https://lucid.app/) <br>
+![Flowcharts](assets/documentation/FlowChart_Quiz_Game.png)<br>
+
 
 ## Features
 
 ### Logo and Intro Message
 
-![Logo and Intro Message](./assets/images/readme/hangman-feature-1.jpg)
+![Logo and Intro Message](assets/documentation//hangman-feature-1.jpg)
 
 * When the users reach the website, they will see this feature. The game logo and the intro message are displayed here.<br>
 
