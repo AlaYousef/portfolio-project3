@@ -275,12 +275,13 @@ def get_result(result):
     print()
     print(f"Game Over.. Your score is {result} / {len(questions)} . \n")
 
-    play_again_input = input("Play Again? (y/n): ")
     while True:
         try:
+            play_again_input = input("Play Again? (y/n): ")
             if play_again_input.lower() == "y":
                 clear_screen()
                 run_quiz()
+                break
             elif play_again_input.lower() == "n":
                 print("Thanks for you time:)")
                 sys.exit()

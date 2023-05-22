@@ -6,7 +6,7 @@ https://www.flake8rules.com/
 
 The Periodic Table Quiz, is a quiz Periodic Table consists of 15 qustions. Each one with 4 answer options. The user choose one option of these answers and it will be displayed to user if the answer is correct or not with more details on correcr answer. At the end of the quiz, user will get the total score out of 15 and asked to coninue or exit. 
 
-[Live Project Here](https://portfolio-project-3.herokuapp.com/)
+[Live Project Here](https://portfolio-proj3.herokuapp.com/)
 
 
 ## README Table Content
@@ -56,22 +56,17 @@ The Periodic Table Quiz, is a quiz Periodic Table consists of 15 qustions. Each 
 
 ### User Stories
 
-* As a website creator, I want to:
+* As the site owner, I want:
   
-1. Build an easy app for the users to play the game.
-2. Build a game that is both enjoyable and challenging for the players.
-   
-* As a new visitor, I want to:
+1. Build an easy application for the users.
+2. Users be able to feel both challenging and enjoyable while playing.
 
-1. Be able to understand the purpose of the App and start a new game.
-2. Be able to follow the score, see the wrong and right letters appear once I take a turn, and see how many tries remain before the game is over.
-3. Be able to watch my results and other players' results on the Leaderboard.
    
-* As a returning visitor, I want to:
+* As a first time user, I want to:
 
-1. Be able to play the game again with a different word as chosen by the computer.
-2. Be challenged and try to improve on my previous scores. 
-3. Compare my scores with other users on the Leaderboard.
+1. Be able to understand the purpose of the App.
+2. Be able to get the score, see the correct and incorrect answers.
+3. Be able to play again and improve my score
    
 ## Design
 
