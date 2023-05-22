@@ -19,11 +19,11 @@ The Periodic Table Quiz, is a quiz Periodic Table consists of 15 qustions. Each 
      * [Flowcharts](#flowcharts)
 
 * Game Features
-    * [Logo and Intro Message](#Logo-and-Intro-Message) 
-    * [Ask Player Name and City](#Ask-Player-Name-and-City)
-    * [Empty Input for Name and City](#Empty-Input-for-Name-and-City)
-    * [Hangman Stage 1](#Hangman-Stage-1)
-    * [Hangman Stage 2](#Hangman-Stage-2) 
+    * [Introduction Message](#Introroduction-Message) 
+    * [Ask Player Name](#Ask-Player-Name)
+    * [Empty Input for Name](#Empty-Input-for-Name)
+    * [Welcome Message](#Welcome-Message)
+    * [Quiz Questions](#Quiz-Questions) 
     * [Hangman Stage 3](#Hangman-Stage-3)
     * [Hangman Stage 4](#Hangman-Stage-4)
     * [Hangman Stage 5](#Hangman-Stage-5)
@@ -70,7 +70,7 @@ The Periodic Table Quiz, is a quiz Periodic Table consists of 15 qustions. Each 
    
 ## Design
 
-#### Colours
+### Colours
 * The colours in the game are supplied by the Python Colorama Model
 
 ### Flowcharts 
@@ -78,47 +78,59 @@ This is the flowchart diagram for the quiz that represent the game process step 
 ![Flowcharts](assets/documentation/FlowChart_Quiz_Game.png)<br>
 
 
-## Features
-
-### Logo and Intro Message
-
-![Logo and Intro Message](assets/documentation//hangman-feature-1.jpg)
-
-* When the users reach the website, they will see this feature. The game logo and the intro message are displayed here.<br>
-
-### Ask Player Name and City
-
-![Ask Player Name and City](./assets/images/readme/hangman-feature-2.jpg)
-* After the player sees the intro feature, the computer will ask the user's to input their name and city.<br>
-
-#### Empty Input for Name and City
-![Empty Input for Name and City](./assets/images/readme/hangman-feature-3.jpg)
-* If the player does not input their name and city, this alert will appear.<br>
-
-### Welcome Message and Game Rules
-![Welcome Message and Game Rules](./assets/images/readme/hangman-feature-4.jpg)
-* After the user inputs their name and city, the program will display the welcome message and the game rules. The player then presses any key to start the game.<br>
-
 ## Game Features
 
-### Hangman Stage 1
-![Game Feature](./assets/images/readme/hangman-feature-5.jpg)<br><br>
+### Introduction Message
 
-This feature displays where the main scene happens. Here the user can play and see the following information about the game:
-* Numbers of letters chosen by the computer 
-* Hangman stages
-* Letters guessed right
-* Letters guessed wrong
-* Current score
-* Current number of attempts
-* Input to guess a letter or a full word
-* Input letters to either guess a letter only or the full word
+* When the users open the website, introduction message with quiz details are displayed here.<br>
 
-### Hangman Stage 2 
+![Introduction Message](assets/documentation/introduction_msg.png)
 
-![Hangman Stage 2 ](./assets/images/readme/hangman-feature-6.jpg)<br><br>
-Any time the player guesses a wrong letter, a part of the hangman appears
-* 1 letter guessed wrong, the player will see the hangman and the first part of the hangman:  a rope, in green.
+### Ask Player Name
+* After the player sees the introduction message for a few seconds, the user will be asked to input his name.<br>
+
+![Ask Player Name](assets/documentation/ask_name.png)
+
+
+#### Empty Input for Name
+* If the player does not input their name and city, this alert will appear.<br>
+
+![Empty Input for Name](assets/documentation/empty_name.png)
+
+
+
+#### Welcome Message
+ * After the player enters their desired username, a short welcome message is displayed and the user asked to press Enter key to start the quiz.<br>
+
+![Welcome Message](assets/documentation/welcome_msg.png)
+
+#### Quiz Questions
+
+ * Then player is presented with the first quiz question.
+
+ * Each question appear with 4 possible answers. Only one is correct.
+
+ * Instructions to enter a number between 1-4 is displayed. This allows the user to answer the quiz question via choosing one of these digits: '1', '2', '3', or '4'.
+
+ * This will repeate until the 15th question is answered.
+
+![Quiz Questions](assets/documentation/quiz_ques.png)<br><br>
+
+#### Correct Answer
+
+ * If the player answers the question correctly, a simple message with "Good! Your answer is correct :)" and more details about this question will be displayed.
+
+ * The players score will increase by 1 at the same time a correct answer is guessed. 
+
+![Correct Answer](assets/documentation/quiz_ques.png)<br>
+
+#### Incorrect Answer
+
+ * If the player answers the quiz question incorrectly, they are presented with the message: "Incorrect. The correct answer is {correct_answer}."
+
+ * The players score will not increase, as only correct answers are incremented. Final score is displayed after the 13th question is answered.
+
+![Incorrect Answer](images/incorrect.png)
 
 ### Hangman Stage 3
 
