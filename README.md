@@ -16,7 +16,7 @@ The Periodic Table Quiz, is a quiz Periodic Table consists of 15 qustions. Each 
 * [Logic](#logic)
      * [Flowcharts](#flowcharts)
 
-* Game Features
+* [Game Features](#Game-Features)
     * [Introduction Message](#Introroduction-Message) 
     * [Ask Player Name](#Ask-Player-Name)
     * [Empty Input for Name](#Empty-Input-for-Name)
@@ -32,7 +32,7 @@ The Periodic Table Quiz, is a quiz Periodic Table consists of 15 qustions. Each 
     * [Lighthouse](#Lighthouse)
     * [Full Testing](#full-festing)
     * [Bugs](#Bugs)
-* [Deploying this Project](#deployment-this-project)
+* [Deployment](#deployment)
     * [Forking this Project](#forking-this-project)
     * [Cloning this Project](#cloning-this-project)
 * [Credits](#credits)
@@ -266,7 +266,7 @@ The [PEP8](http://pep8online.com/) Validator Service was used to validate the Py
 
 * Indentation warnings were solved by helping from [Flake8rules](https://www.flake8rules.com/).
 
-* Readme file following template is from: [GitHub](https://github.com/KrystalCoding/plant-quiz/blob/main/README.md) and [GitHub](https://github.com/PedroCristo/portfolio_project_3#Ask-Player-Name-and-City). 
+* Readme file following template is from these repositories on GitHub : [plant-quiz](https://github.com/KrystalCoding/plant-quiz/blob/main/README.md) and [portfolio_project_3](https://github.com/PedroCristo/portfolio_project_3#Ask-Player-Name-and-City). 
 
 
 
@@ -279,7 +279,7 @@ The [PEP8](http://pep8online.com/) Validator Service was used to validate the Py
 [Back to top](<#contents>)
 
 ## Acknowledgements
-The site was completed as a Portfolio Project 2 for the Full Stack Software Developer Diploma at the [Code Institute](https://codeinstitute.net/). I would like to thank my mentor [Precious Ijege](https://www.linkedin.com/in/precious-ijege-908a00168/), the Slack community, tutor support. And all at the Code Institute for their help.
+This App was completed as a Portfolio Project 3 for the Full Stack Software Developer Diploma at the [Code Institute](https://codeinstitute.net/). I would like to thank my mentor [Precious Ijege](https://www.linkedin.com/in/precious-ijege-908a00168/), the Slack community, tutor support. And all at the Code Institute for their help.
 
 [Back to top](<#contents>)
 
