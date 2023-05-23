@@ -1,5 +1,3 @@
-https://www.britannica.com/quiz/facts-you-should-know-the-periodic-table-quiz
-https://www.flake8rules.com/
 # The Periodic Table Quiz
 
 # Introduction
@@ -9,7 +7,7 @@ The Periodic Table Quiz, is a quiz Periodic Table consists of 15 qustions. Each 
 [Live Project Here](https://portfolio-proj3.herokuapp.com/)
 
 
-## README Table Content
+## CONTENTS
 
 * [Introduction](#introduction)
 * [User Experience UX](#user-experience---UX)
@@ -24,33 +22,25 @@ The Periodic Table Quiz, is a quiz Periodic Table consists of 15 qustions. Each 
     * [Empty Input for Name](#Empty-Input-for-Name)
     * [Welcome Message](#Welcome-Message)
     * [Quiz Questions](#Quiz-Questions) 
-    * [Hangman Stage 3](#Hangman-Stage-3)
-    * [Hangman Stage 4](#Hangman-Stage-4)
-    * [Hangman Stage 5](#Hangman-Stage-5)
-    * [Hangman Stage 6](#Hangman-Stage-6)
-    * [Hangman Stage 7](#Hangman-Stage-7)
-    * [Hangman Stage 8 - Lose](#Hangman-Stage-8---Lose)
-    * [Hangman Stage 9 - Win](#Hangman-Stage-9---Win)
-    * [Hangman Stage 10 - Win Extra](#Hangman-Stage-10---Win-Extra)
-    * [Menu Options](#Menu-Options)
-    * [Leaderboard](#Leaderboard)
-    * [Exit Game](#Exit-Game)
-    * [How to Play](#how-to-play)
-* [Storage Data](#Storage-Data)
-* [Technologies Used](#technologies-used)
-    * [Languages Used](#languages-used)
-    * [Python Packages](#Python-Packages)
-    * [Frameworks - Libraries - Programs Used](#frameworks---libraries---programs-used)
+    * [Correct Answer](#Correct-Answer)
+    * [Incorrect Answer](#Incorrect-Answer)
+    * [Invalid Data](#Invalid-Data)
+    * [Final Score](#Final-Score)
+    * [Play Again](#Play-Again)
 * [Testing](#testing)
     * [PEP 8 Online](#PEP-8-Online)
     * [Lighthouse](#Lighthouse)
-    * [Functionality](#Functionality)
-    * [Bugs](Bugs
+    * [Full Testing](#full-festing)
+    * [Bugs](#Bugs)
 * [Deploying this Project](#deployment-this-project)
     * [Forking this Project](#forking-this-project)
     * [Cloning this Project](#cloning-this-project)
 * [Credits](#credits)
-* [Content](#content)
+    * [Contents](#contents)
+    * [Information Sources / Resources](#Information-Sources-Resources)
+* [Acknowledgements](#Acknowledgements)
+
+
 
 ## User Experience - UX
 
@@ -67,7 +57,9 @@ The Periodic Table Quiz, is a quiz Periodic Table consists of 15 qustions. Each 
 1. Be able to understand the purpose of the App.
 2. Be able to get the score, see the correct and incorrect answers.
 3. Be able to play again and improve my score
-   
+
+[Back to top](<#contents>)
+
 ## Design
 
 ### Colours
@@ -77,6 +69,7 @@ The Periodic Table Quiz, is a quiz Periodic Table consists of 15 qustions. Each 
 This is the flowchart diagram for the quiz that represent the game process step by step. The charts were generated using [Lucidchart](https://lucid.app/) <br>
 ![Flowcharts](assets/documentation/FlowChart_Quiz_Game.png)<br>
 
+[Back to top](<#contents>)
 
 ## Game Features
 
@@ -86,23 +79,28 @@ This is the flowchart diagram for the quiz that represent the game process step 
 
 ![Introduction Message](assets/documentation/introduction_msg.png)
 
+[Back to top](<#contents>)
+
 ### Ask Player Name
 * After the player sees the introduction message for a few seconds, the user will be asked to input his name.<br>
 
 ![Ask Player Name](assets/documentation/ask_name.png)
 
+[Back to top](<#contents>)
 
 #### Empty Input for Name
 * If the player does not input their name and city, this alert will appear.<br>
 
 ![Empty Input for Name](assets/documentation/empty_name.png)
 
-
+[Back to top](<#contents>)
 
 #### Welcome Message
  * After the player enters their desired username, a short welcome message is displayed and the user asked to press Enter key to start the quiz.<br>
 
 ![Welcome Message](assets/documentation/welcome_msg.png)
+
+[Back to top](<#contents>)
 
 #### Quiz Questions
 
@@ -116,172 +114,104 @@ This is the flowchart diagram for the quiz that represent the game process step 
 
 ![Quiz Questions](assets/documentation/quiz_ques.png)<br><br>
 
+[Back to top](<#contents>)
+
 #### Correct Answer
 
- * If the player answers the question correctly, a simple message with "Good! Your answer is correct :)" and more details about this question will be displayed.
+ * If the player answers the quiz question correctly, a simple message with: "Good! Your answer is correct :) ⭐" and more details about this question will be displayed.
 
  * The players score will increase by 1 at the same time a correct answer is guessed. 
 
-![Correct Answer](assets/documentation/quiz_ques.png)<br>
+![Correct Answer](assets/documentation/correct_answer.png)<br>
+
+[Back to top](<#contents>)
 
 #### Incorrect Answer
 
- * If the player answers the quiz question incorrectly, they are presented with the message: "Incorrect. The correct answer is {correct_answer}."
+ * If the player answers the quiz question incorrectly, a simple message with: "Your answer is incorrect :(. The correct answer is {correct_answer}."
 
- * The players score will not increase, as only correct answers are incremented. Final score is displayed after the 13th question is answered.
+![Incorrect Answer](assets/documentation/incorrect_answer.png)<br>
 
-![Incorrect Answer](images/incorrect.png)
+[Back to top](<#contents>)
 
-### Hangman Stage 3
+#### Invalid Data
 
-![Hangman Stage 3](./assets/images/readme/hangman-feature-7.jpg)
-* 2 letters guessed wrong the player will see the hangman and 2 parts of the hangman a rope and head in green.
+ * If the player enter any data rather than '1','2','3' and '4', a message with: "Invalid data: please try again"
 
-### Hangman Stage 4
+![Invalid data](assets/documentation/invalid_data.png)<br>
 
-![Hangman Stage 4](./assets/images/readme/hangman-feature-8.jpg)
-* 3 letters guessed wrong the player will see the hangman and 3 parts of the hangman rope, head and torso in yellow.
+[Back to top](<#contents>)
 
-### Hangman Stage 5
+#### Final Score
+ * If the user finish the quiz, the final score out of 15 will be shown. And a "⭐⭐congratulations⭐⭐" message will be displyed if the total scores were equal or more than 13.
 
-![Hangman Stage 5](./assets/images/readme/hangman-feature-9.jpg)
-* 4 letters guessed wrong the player will see the hangman and 4 parts of the hangman rope, head, torso and the right arm in yellow.
+![Final Score](assets/documentation/final_score.png)<br>
 
-### Hangman Stage 6
+[Back to top](<#contents>)
 
-![Hangman Stage 6](./assets/images/readme/hangman-feature-10.jpg)
-* 5 letters guessed wrong the player will see the hangman and 5 parts of the hangman, rope, head, torso and both arms in red. Also the alert message "Danger Zone" will be displayed.
+#### Play Again
 
-### Hangman Stage 7
+ * After the user answered all 15 questions and get the score, he will asked to play again by enter 'y' for yes or 'n' for no.
 
-![Hangman Stage 7](./assets/images/readme/hangman-feature-11.jpg)
-* 6 letters guessed wrong and the player will see the hangman and 6 parts of the hangman rope, head, torso, both arms and left leg in red. Also the alert message "Danger Zone" will be displayed.
+ * If the user enter anything rather than 'y' or 'n', this message will be displayed: "Invalid input: please enter 'y' to continue or 'n' to  exit.".
 
-### Hangman Stage 8 - Lose
+![Play Again1](assets/documentation/paly_again1.png)<br>
 
-![Hangman Stage 8 - Lose](./assets/images/readme/hangman-feature-12.jpg)
-* 7 letters guessed wrong the player will see the full hangman and the game is over.
+[Back to top](<#contents>)
 
-### Hangman Stage 9 - Win
+* If the user enter 'y', The quiz questions will start again.
 
-![Hangman Stage 9 - Win](./assets/images/readme/hangman-feature-13.jpg)
-* If the player guessed the full word letter by letter, they will see this feature and will win the game and get 200 points.
+* If the user enter 'n', The quiz ends and a message with: "Thanks for you time:)" will be displayed.
 
-### Hangman Stage 10 - Win Extra
+![Play Again3](assets/documentation/play_again3.png)<br>
 
-![Hangman Stage 10 - Win Extra](./assets/images/readme/hangman-feature-14.jpg)
-* If the player guessed all the letters that appear in the word thereby completing the word or at least guessing no more than 3 correct letters before completing the full word, this feature will appear.
-
-### Menu Options
-
-![Menu Options](./assets/images/readme/hangman-menu.jpg)
-* In the end of the game users will have access to the menu where they can choose from these options: <br>
-[A] - Play Again <br>
-[B] - Leaderboard <br>
-[C] - Exit Game
-
-### Leaderboard
-![Leaderboard](./assets/images/readme/hangman-leaderboard.jpg)
-* The Leaderboard shows the 15 players with the best scores.
-
-### Exit Game
-![Exit Game](./assets/images/readme/hangman-exit-game.jpg)
-* The players will see this message if they will chose to exit the game by typing [C].
-
-### How to Play
-![How to Play](./assets/images/readme/hangman-explanation-1.jpg)<br>
-![How to Play](./assets/images/readme/hangman-message-back.jpg)<br>
-The player has 7 attempts to try to guess the right word by inputting letters or can try to input all the letters to correctly complete the full . The word is randomly chosen by the computer from a list.
-* When the game starts the player can see how many letters are in the word [1] and the computer will ask the player to input a letter or a word [7].
-* If the player guesses the right letter, they will see a message from the computer [8] the letter guessed displayed in the word length [3], the hangman stage will remain the same [2] and the score will increase by 25 points [5]
-* If the player guesses a wrong letter, they will see a message from the computer [9] the letter guessed displayed in the wrong letters guesses [4], the hangman stage will turn to the next stage [2] and the number of attempts will decrease by 1 [6]
-* When the player types an invalid input, they will see a message from the computer [10].
-* If the user guesses the right word they will see the [Winner Feature](#Hangman-Stage-9---Win)
-* If the player guessed the full word at once or at least no more than 3 letters guessed right before trying to guess the full word, they will win the game-winning 500 extra points and see this feature [Winner Feature / Extra Points](#Hangman-Stage-10---Win)
-* 7 letters guessed wrong and the player will see the [Loser Feature](#Hangman-Stage-8---lose)
-
-## Storage Data
-
-I have used a Google sheet to save the player name, city, score and date.  This sheet is connected to the code through the Google Drive and Google Sheet API by the Google Cloud Platform. This method allows me to send and receive data as I had access to the Google Sheet API credentials. I also added in the Config Vars to these credentials when I was deploying the project in Heroku. As this is sensitive data, I had to add the creds.json in the Git ignore file. This would ensure that these credentials are not pushed to the repository.
-
-### Code to Connect to Google Sheet
-
-![Code to Connect to Google Sheet](./assets/images/readme/hangman-creds.jpg)
-
-### Google Sheet Hangman Leaderboard
-
-![Google Sheet Hangman Leaderboard](./assets/images/readme/hangman-google-sheet.jpg)
-
-## Technologies Used
-### Languages Used 
-
-* [Python](https://www.python.org/)
-
-#### Python Packages
-
-* [Random](https://docs.python.org/3/library/random.html?highlight=random#module-random): returns a random integer to get a random word
-* [Datetime](https://pypi.org/project/DateTime/): returns the full date
-* [Gspread](https://pypi.org/project/gspread/): allows communication with Google Sheets
-* [Colorama](https://pypi.org/project/colorama/): allows terminal text to be printed in different colours / styles
-* [Time](https://pypi.org/project/time/): defined time sleep
-* [google.oauth2.service_accoun](https://google-auth.readthedocs.io/en/stable/index.html): credentials used to validate credentials and grant access to Google service accounts
-  
-### Frameworks - Libraries - Programs Used
-
-* [Git](https://git-scm.com/)
-    * Git was used for version control by utilizing the Gitpod terminal to commit to Git and push to GitHub
-* [GitHub](https://github.com/)
-    * GitHub is used to store the project's code after being pushed from Git
-* [Heroku](https://id.heroku.com)
-    * Heroku was used to deploy the live project
-* [VSCode](https://code.visualstudio.com/)
-    * VSCode was used to create and edit the website
-* [Lucidchart](https://lucid.app/)
-    * Lucidchart was used to create the flowchart
-* [PEP8](http://pep8online.com/)
-    * The PEP8 was used to validate all the Python code
-* [Patorjk](https://patorjk.com)
-    * Patorjk (ASCII Art Generator) was used to draw the game logos
+[Back to top](<#contents>)
 
 ## Testing
 
 ### PEP 8 Online
 
-The [PEP8](http://pep8online.com/) Validator Service was used to validate every Python file in the project to ensure there were no syntax errors in the project.
+The [PEP8](http://pep8online.com/) Validator Service was used to validate the Python file in the project to ensure there is no syntax errors in the project.
 
-![PEP8](./assets/images/readme/hangman-pep8-results.jpg).
 * No errors or warnings were found during the testing of the code in PEP8
-  
+
+![PEP8](assets/documentation/PEP8.png)<br>
+
+[Back to top](<#contents>)
+
 ### Lighthouse 
 
- Lighthouse was used to test Performance, Best Practices, Accessibility and SEO on the Desktop.
+* Lighthouse was used to test Performance, Best Practices, Accessibility and SEO on the Desktop.
 
-* Desktop Results:
+![Lighthouse Result](assets/documentation/lighthouse.png)<br>
 
-  ![Lighthouse Result](./assets/images/readme/hangman-lighthouse.jpg).
+[Back to top](<#contents>)
 
-  ## Functionality 
-* The terminal has no issues and is working properly 
-* The typewriter starts typing at the right time and is working correctly 
-* The input for name and city have the right behaviour and shows the user an alert if the input is empty
-* The game rules appear without any issues after the player submits their name and city
-* The option to press any key to start a game is running well
-* The game runs without any issues and as expected 
-* At the end of the game, the Leaderboard is updating correctly
-* All the menu options are working without any fails
+### Full Testing 
+
+| Test     | Expected  Outcome   | Pass/Fail    | 
+| :----     |    :----   |  :---- | 
+| Run run.py | Loads run.py, username prompt appears | Pass |
+| Insert username | Welcome message with entered username will displayed | Pass |
+| Press Enter without insert name | Try again message will displayed | Pass |
+| Press Enter to start | Prepering quiz messaege will appear, Page Clear function executes and the first question will displayed | Pass |
+| Enter answer in digits (1-4) + Enter | Loads correct/incorrect Output and provides correct answer, loads next question | Pass |
+| Press Enter With No Input/ Enter any other didgits | Invalid data message will be displayed, prompts user to try again and enter digits 1-4 | pass |
+| Press Enter on Final Quiz question | Loads Final Score Output, Loads Game Over message and Try Again option | Pass |
+| User gets score >= 13 | A congratulations message will displayed with the final score result score/15 | Pass |
+| Press Enter or any enteries rather than 'y'/'n' | Loads Invalid Data message, prompts the user to try again and enter 'y' or 'n'. | Pass |
+| Press Y on Try Again prompt |  Clears the page and runs quiz again, scores counter return back to 0 | Pass |
+| Press N on Try Again Prompt | Loads Thankfull message to player, system exit command executed | Pass |
+
+[Back to top](<#contents>)
 
 ## Bugs 
-### Python Lines too Long
-![Lines to long](./assets/images/readme/hangman-issue.jpg)
-![Lines to long](./assets/images/readme/hangman-issue-result.jpg)
+### Resolved
 
-* When I first built the ASCII art for the logo I got the warning "line too long (126 > 79 characters)" from PEP8.<br>
+* Through testing, I had indentation warnings which fixed direct.
+* Infinit loop occurred after adding exception part on play again function when the user enter anything rather than 'y' or 'n'. It was fixed by adding a 'break' statement at the end of IF statement on try block.
 
-### Fixed Bug
-![Fix Bug](./assets/images/readme/hangman-issue-fixed.jpg)
-* I had to rebuild the logo using the program Patorjk (ASCII Art Generator) to avoid these issues.
-* 
-## Deploying this Project
+## Deployment
 
 * This site was deployed by completing the following steps:
 
@@ -291,8 +221,8 @@ The [PEP8](http://pep8online.com/) Validator Service was used to validate every 
 4. Next select your region
 5. Click on the Create App button
 6. The next page is the project’s Deploy Tab. Click on the Settings Tab and scroll down to Config Vars
-7. Click Reveal Config Vars and enter port into the Key box and 8000 into the Value box and click the Add button
-8. Click Reveal Config Vars again and enter CREDS into the Key box and the Google credentials into the Value box
+7. Click Reveal Config Vars and enter POSRT into the Key box and 8000 into the Value box and click the Add button
+8. If there are credentiels click Reveal Config Vars again and enter CREDS into the Key box and the Google credentials into the Value box
 9. Next, scroll down to the Buildpack section click Add Buildpack select python and click Save Changes
 10. Repeat step 8 to add node.js. o Note: The Buildpacks must be in the correct order. If not click and drag them to move into the correct order
 11. Scroll to the top of the page and choose the Deploy tab
@@ -300,7 +230,7 @@ The [PEP8](http://pep8online.com/) Validator Service was used to validate every 
 13. Confirm you want to connect to GitHub
 14. Search for the repository name and click the connect button
 15. Scroll to the bottom of the deploy page and select the preferred deployment type
-16. Click either Enable Automatic Deploys for automatic deployment when you push updates to Github
+16. Click Enable Automatic Deploys for automatic deployment when you push updates to Github
 
 ## Forking This Project
 
@@ -324,26 +254,33 @@ The [PEP8](http://pep8online.com/) Validator Service was used to validate every 
 7. Type git clone and paste the URL copied in step 3
 8. Press Enter and the project is cloned
 
+[Back to top](<#contents>)
+
 ## Credits
 
 ### Content
 
-* All the content in the game is original 
-* The terminal function and template for the deployable application was provided by [Code Institute - Template](https://github.com/Code-Institute-Org/python-essentials-template)
-* The Python code for the typewriter was taken from the following tutorial: [Kwasii](outube.com/watch?v=A_1THfBpCH8)
-  
+* All quiz questions have been taken from [Britannica](https://www.britannica.com/quiz/facts-you-should-know-the-periodic-table-quiz).
+
+* The Python code functionality help is from the following: [Real Python Tutorials](https://realpython.com/python-quiz-application/#step-1-ask-questions) and from this repository [GitHub](https://github.com/KrystalCoding/plant-quiz/blob/main/README.md).
+
+* Indentation warnings were solved by helping from [Flake8rules](https://www.flake8rules.com/).
+
+* Readme file following template is from: [GitHub](https://github.com/KrystalCoding/plant-quiz/blob/main/README.md) and [GitHub](https://github.com/PedroCristo/portfolio_project_3#Ask-Player-Name-and-City). 
+
+
+
 ### Information Sources / Resources
 
+* [Code Institute](https://learn.codeinstitute.net/dashboard)
 * [W3Schools - Python](https://www.w3schools.com/python/)
 * [Stack Overflow](https://stackoverflow.com/)
-* [Scrimba - Pyhton](https://scrimba.com/learn/python)
-* [Gambiter](http://gambiter.com/paper-pencil/Hangman_game.html)
 
+[Back to top](<#contents>)
 
-## Special Thanks
+## Acknowledgements
+The site was completed as a Portfolio Project 2 for the Full Stack Software Developer Diploma at the [Code Institute](https://codeinstitute.net/). I would like to thank my mentor [Precious Ijege](https://www.linkedin.com/in/precious-ijege-908a00168/), the Slack community, tutor support. And all at the Code Institute for their help.
 
-  * Special thanks to my mentor Sandeep Aggarwal, my colleagues at Code Institute, Kasia Bogucka, Shellie Downie and Mairéad Gillic for their assistance throughout this project.
-
-
+[Back to top](<#contents>)
 
 

@@ -246,12 +246,12 @@ def run_quiz():
         print()
         print(index['question'])
         for answers in index['answers']:
-            print(answers)
+            print(f"  {answers}")
         print()
         answer = check_answer_input()
         for value in index['answers']:
             if answer == index['correct_answer'][:1]:
-                print(f"Good! Your answer is correct :)")
+                print(f"Good! Your answer is correct ⭐")
                 print(index['details'])
                 print()
                 score += 1
@@ -273,6 +273,8 @@ def get_result(result):
     repeatedly request data, until it is valid.
     """
     print()
+    if result >= 13:
+        print("⭐⭐congratulations⭐⭐")
     print(f"Game Over.. Your score is {result} / {len(questions)} . \n")
 
     while True:
