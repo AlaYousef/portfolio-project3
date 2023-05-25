@@ -10,7 +10,7 @@ The Periodic Table Quiz, is a quiz Periodic Table consists of 15 qustions. Each 
 ## CONTENTS
 
 * [Introduction](#introduction)
-* [User Experience UX](#user-experience---UX)
+* [User Experience UX](#user-experience-ux)
 * [Design](#Design)
     * [Colours](#Colours)
 * [Logic](#logic)
@@ -143,9 +143,11 @@ This is the flowchart diagram for the quiz that represent the game process step 
 [Back to top](<#contents>)
 
 #### Final Score
- * If the user finish the quiz, the final score out of 15 will be shown. And a "⭐⭐congratulations⭐⭐" message will be displyed if the total scores were equal or more than 13.
+ * If the user finish the quiz, the final score out of 15 will be shown. And a "⭐⭐Congratulations!⭐⭐" message will be displyed if the total scores were equal or more than 13.
 
 ![Final Score](assets/documentation/final_score.png)<br>
+
+![Perfect Score](assets/documentation/perfec_score.png)<br>
 
 [Back to top](<#contents>)
 
@@ -266,7 +268,7 @@ The [PEP8](http://pep8online.com/) Validator Service was used to validate the Py
 
 * Indentation warnings were solved by helping from [Flake8rules](https://www.flake8rules.com/).
 
-* Readme file following template is from these repositories on GitHub : [plant-quiz](https://github.com/KrystalCoding/plant-quiz/blob/main/README.md) and [portfolio_project_3](https://github.com/PedroCristo/portfolio_project_3#Ask-Player-Name-and-City). 
+* Readme file following templates from these repositories on GitHub : [plant-quiz](https://github.com/KrystalCoding/plant-quiz/blob/main/README.md) and [portfolio_project_3](https://github.com/PedroCristo/portfolio_project_3#Ask-Player-Name-and-City). 
 
 
 

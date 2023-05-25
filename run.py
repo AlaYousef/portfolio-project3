@@ -274,7 +274,7 @@ def get_result(result):
     """
     print()
     if result >= 13:
-        print("⭐⭐congratulations⭐⭐")
+        print("⭐⭐ Congratulations! ⭐⭐")
     print(f"Game Over.. Your score is {result} / {len(questions)} . \n")
 
     while True:
