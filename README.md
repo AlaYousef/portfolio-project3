@@ -32,6 +32,7 @@ The Periodic Table Quiz, is a quiz Periodic Table consists of 15 qustions. Each 
     * [Lighthouse](#Lighthouse)
     * [Full Testing](#full-festing)
     * [Bugs](#Bugs)
+* [Technologies Used](#technologies-used)
 * [Deployment](#deployment)
     * [Forking this Project](#forking-this-project)
     * [Cloning this Project](#cloning-this-project)
@@ -212,6 +213,18 @@ The [PEP8](http://pep8online.com/) Validator Service was used to validate the Py
 
 * Through testing, I had indentation warnings which fixed direct.
 * Infinit loop occurred after adding exception part on play again function when the user enter anything rather than 'y' or 'n'. It was fixed by adding a 'break' statement at the end of IF statement on try block.
+
+[Back to top](<#contents>)
+
+## Technologies Used
+
+ * Python is the programming language used to produce this quiz game.
+  
+ * [GitHub](https://www.github.com) was used to hold the game repository files.
+
+ * [Gitpod](https://www.gitpod.io) and [CodeAnywere](https://app.codeanywhere.com/) were used for the coding environment.
+
+ * [Heroku](https://www.heroku.com) was used for deplyment.
 
 ## Deployment
 
