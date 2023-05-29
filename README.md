@@ -108,7 +108,9 @@ This is the flowchart diagram for the quiz that represent the game process step 
  * Then player is presented with the first quiz question.
 
  * Each question appear with 4 possible answers. Only one is correct.
-
+ 
+ * The questions will be randomize every time the user choose to play again.
+ 
  * Instructions to enter a number between 1-4 is displayed. This allows the user to answer the quiz question via choosing one of these digits: '1', '2', '3', or '4'.
 
  * This will repeate until the 15th question is answered.

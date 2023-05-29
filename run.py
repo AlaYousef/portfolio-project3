@@ -241,8 +241,8 @@ def check_answer_input():
                 raise ValueError(
                     f"Answer option should be from 1 to 4"
                 )
-        except ValueError as e:
-            print(f"Invalid data: {e} please try again.\n")
+        except ValueError:
+            print(f"Invalid data: please try again.\n")
 
 
 def run_quiz():
